@@ -16,13 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oZ-h2-rEj">
-                                <rect key="frame" x="174" y="433" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" systemColor="systemYellowColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Feedback" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEA-Z0-Qnl">
+                                <rect key="frame" x="20" y="104" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yT5-JO-RpR">
+                                <rect key="frame" x="274" y="203" width="120" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Error"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-an-6qc">
+                                <rect key="frame" x="147" y="203" width="120" height="50"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="DC4-Pw-l9E"/>
+                                    <constraint firstAttribute="height" constant="50" id="b2U-n3-Lx5"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Warning"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oZ-h2-rEj">
+                                <rect key="frame" x="20" y="203" width="120" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Success">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="FeedbackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yux-ml-YWt"/>
                                 </connections>
@@ -30,16 +55,39 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yT5-JO-RpR" firstAttribute="top" secondItem="ZEA-Z0-Qnl" secondAttribute="bottom" constant="70" id="0QU-9Z-tSj"/>
+                            <constraint firstItem="yT5-JO-RpR" firstAttribute="leading" secondItem="Tgt-an-6qc" secondAttribute="trailing" constant="7" id="1Pa-ld-cv6"/>
+                            <constraint firstItem="ZEA-Z0-Qnl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2GF-Oa-ccO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yT5-JO-RpR" secondAttribute="trailing" constant="20" id="6J3-yp-Ekn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZEA-Z0-Qnl" secondAttribute="trailing" constant="20" id="C9F-DD-1SE"/>
+                            <constraint firstItem="Tgt-an-6qc" firstAttribute="centerY" secondItem="5oZ-h2-rEj" secondAttribute="centerY" id="FQb-Cz-tHR"/>
+                            <constraint firstItem="5oZ-h2-rEj" firstAttribute="top" secondItem="ZEA-Z0-Qnl" secondAttribute="bottom" constant="70" id="Fz6-kq-hvN"/>
+                            <constraint firstItem="5oZ-h2-rEj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IG8-Hi-mN5"/>
+                            <constraint firstItem="Tgt-an-6qc" firstAttribute="leading" secondItem="5oZ-h2-rEj" secondAttribute="trailing" constant="7" id="Pco-qM-zIg"/>
+                            <constraint firstItem="yT5-JO-RpR" firstAttribute="centerY" secondItem="5oZ-h2-rEj" secondAttribute="centerY" id="cfV-FB-CXf"/>
+                            <constraint firstItem="yT5-JO-RpR" firstAttribute="width" secondItem="5oZ-h2-rEj" secondAttribute="width" id="etb-Zp-czg"/>
+                            <constraint firstItem="Tgt-an-6qc" firstAttribute="width" secondItem="5oZ-h2-rEj" secondAttribute="width" id="omk-g8-OIo"/>
+                            <constraint firstItem="Tgt-an-6qc" firstAttribute="height" secondItem="5oZ-h2-rEj" secondAttribute="height" id="sMF-73-pg3"/>
+                            <constraint firstItem="ZEA-Z0-Qnl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="tfV-MC-sEY"/>
+                            <constraint firstItem="yT5-JO-RpR" firstAttribute="height" secondItem="5oZ-h2-rEj" secondAttribute="height" id="uAe-Dd-a5D"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="93"/>
+            <point key="canvasLocation" x="131.8840579710145" y="92.410714285714278"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
